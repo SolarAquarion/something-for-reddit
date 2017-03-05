@@ -43,7 +43,7 @@ snudown/build/lib.linux-x86_64-2.7/snudown.so: snudown/src/markdown.h snudown/sr
 snudown.so: snudown/build/lib.linux-x86_64-2.7/snudown.so
 	cp snudown/build/lib.linux-x86_64-2.7/snudown.so snudown.so
 install-exec-local: snudown.so
-	install snudown.so $(libdir)/snudown.so
+	install snudown.so $(pkgdir)/$(libdir)/snudown.so
 
 something_for_reddit_LDADD = $(SOMETHING_FOR_REDDIT_LIBS) snudown.so
 something_for_reddit_markdown_tester_LDADD = $(something_for_reddit_LDADD)
